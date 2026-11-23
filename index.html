@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludmily | Portfólio Pessoal</title>
+  <meta name="description" content="Portfólio de Ludmily, estudante de Sistemas de Informação na UDF, em busca do primeiro estágio em tecnologia.">
+  <meta property="og:title" content="Ludmily | Portfólio Pessoal">
+  <meta property="og:description" content="Estudante de Sistemas de Informação na UDF, em busca do primeiro estágio em tecnologia.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Estilos (arquivo separado) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== CABEÇALHO / MENU ===== -->
+  <header class="header">
+    <nav class="navbar container" aria-label="Menu principal">
+      <a class="logo" href="#inicio">Ludmily<span>.</span></a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav" id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== INÍCIO ===== -->
+    <section class="hero container" id="inicio">
+      <p class="eyebrow">✿ Portfólio · Sistemas de Informação ✿</p>
+
+      <div class="avatar">
+        <img src="images/ludmily-foto.jpg" alt="Selfie de Ludmily no espelho">
+      </div>
+
+      <h1>Ludmily</h1>
+
+      <p class="sub">
+        Estudante de Sistemas de Informação na UDF,
+        em busca do primeiro estágio em tecnologia.
+      </p>
+
+      <p class="typing" aria-live="polite">Eu gosto de <span id="typing-text">desenvolvimento web</span><span class="cursor">|</span></p>
+
+      <div class="actions">
+        <a class="btn" href="#projetos">Ver meus projetos</a>
+        <a class="btn ghost" href="#contato">Entrar em contato</a>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MIM ===== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="title reveal">Sobre mim</h2>
+
+        <div class="split reveal">
+          <div class="media portrait">
+            <img src="images/sobre.jpg" alt="Ludmily sentada em um carro" loading="lazy">
+          </div>
+
+          <div class="text">
+            <p>Olá! Eu sou a <strong>Ludmily</strong>, estudante de Sistemas de Informação na UDF, em Brasília. Tenho grande interesse em desenvolvimento web e na criação de projetos.</p>
+            <p>Gosto de aprender coisas novas, resolver problemas e evoluir na área de tecnologia. Hoje estudo e pratico HTML, CSS, JavaScript, PHP e MySQL.</p>
+            <p>Acredito que tecnologia boa é aquela que facilita a vida das pessoas.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">Minha trajetória</h3>
+
+        <ol class="timeline reveal">
+          <li>
+            <b>UDF · 1º semestre</b>
+            <h3>Entrada em Sistemas de Informação</h3>
+            <p>Primeiro contato com lógica de programação e algoritmos.</p>
+          </li>
+          <li>
+            <b>Web</b>
+            <h3>HTML e CSS</h3>
+            <p>Criação de páginas e layouts responsivos.</p>
+          </li>
+          <li>
+            <b>Lógica</b>
+            <h3>JavaScript</h3>
+            <p>Interações e validação de formulários.</p>
+          </li>
+          <li>
+            <b>Back-end</b>
+            <h3>PHP e MySQL</h3>
+            <p>Primeiros sistemas com cadastro e banco de dados.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <h2 class="title reveal">Habilidades &amp; Tecnologias</h2>
+
+        <ul class="chips reveal">
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Git &amp; GitHub</li>
+          <li>Lógica de programação</li>
+          <li>VS Code</li>
+        </ul>
+
+        <h3 class="sub-title reveal">Habilidades comportamentais</h3>
+
+        <ul class="chips reveal">
+          <li>Comunicação</li>
+          <li>Trabalho em equipe</li>
+          <li>Pensamento crítico</li>
+          <li>Organização</li>
+          <li>Resolução de problemas</li>
+          <li>Aprendizado contínuo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2 class="title reveal">Projetos</h2>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <span class="kind">Acadêmico · em equipe</span>
+            <h3>Desafio colaborativo Git</h3>
+            <p>Fluxo de trabalho com Git e GitHub simulando um time de desenvolvimento.</p>
+            <ul>
+              <li>Branches e merges</li>
+              <li>Commits claros</li>
+              <li>Documentação em Markdown</li>
+            </ul>
+            <a href="https://github.com/ludmily2007-lang" target="_blank" rel="noopener">Ver no GitHub</a>
+          </article>
+
+          <article class="card reveal">
+            <span class="kind">Acadêmico</span>
+            <h3>Sistema web com PHP e MySQL</h3>
+            <p>Páginas, formulários e banco de dados para cadastrar e consultar informações.</p>
+            <ul>
+              <li>Conexão PHP + MySQL</li>
+              <li>Validação de formulários</li>
+              <li>Código reutilizável</li>
+            </ul>
+            <a href="https://github.com/ludmily2007-lang" target="_blank" rel="noopener">Ver no GitHub</a>
+          </article>
+
+          <article class="card reveal">
+            <span class="kind">Pessoal</span>
+            <h3>Este portfólio</h3>
+            <p>Site feito com HTML, CSS e JavaScript.</p>
+            <ul>
+              <li>Layout responsivo</li>
+              <li>Pastas organizadas</li>
+              <li>GitHub Pages</li>
+            </ul>
+            <a href="#inicio">Voltar ao início</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOBBIES ===== -->
+    <section class="section" id="hobbies">
+      <div class="container">
+        <h2 class="title reveal">Hobbies &amp; Interesses</h2>
+
+        <div class="split reveal">
+          <div class="media">
+            <img src="images/hobby-fotografia.jpg" alt="Celular fotografando o pôr do sol" loading="lazy">
+          </div>
+          <div class="text">
+            <h3>Fotografia</h3>
+            <p>Gosto de registrar momentos e paisagens, principalmente quando o céu está bonito. Fotografar é uma forma de guardar lembranças e observar os detalhes ao meu redor.</p>
+          </div>
+        </div>
+
+        <div class="split flip reveal">
+          <div class="text">
+            <h3>Música</h3>
+            <p>Gosto de ouvir música nos momentos livres. Ela me ajuda a relaxar, melhorar o humor e aproveitar meus momentos de descanso.</p>
+          </div>
+          <div class="media">
+            <img src="images/hobby-musica.jpg" alt="Ilustração de uma pessoa ouvindo música" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section" id="contato">
+      <div class="container contact reveal">
+        <h2 class="title">Vamos conversar?</h2>
+        <p>Estou aberta a oportunidades de estágio, trocas de conhecimento e projetos em equipe.</p>
+
+        <div class="actions">
+          <a class="btn" href="mailto:ludmily2007@gmail.com">ludmily2007@gmail.com</a>
+          <a class="btn ghost" href="https://github.com/ludmily2007-lang" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <button class="copy-email" id="copy-email" type="button">Copiar e-mail</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="footer">
+    © <span id="year"></span> Ludmily · Feito com HTML, CSS, JavaScript e carinho ♡
+  </footer>
+
+  <a href="#inicio" class="to-top" id="to-top" aria-label="Voltar ao topo">↑</a>
+
+  <!-- Scripts (arquivo separado) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

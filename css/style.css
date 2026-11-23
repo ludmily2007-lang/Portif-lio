@@ -1,0 +1,517 @@
+/* =========================================
+   Portfólio da Ludmily — style.css
+   ========================================= */
+
+/* ---------- Variáveis de cor ---------- */
+:root {
+  --bg: #1c1030;
+  --bg2: #2a1642;
+  --card: #33204f;
+  --line: #4d3470;
+  --text: #fff1f6;
+  --muted: #d1bfe3;
+  --accent: #ff9ec4;
+  --accent2: #c9a8ff;
+  --header-h: 64px;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), var(--bg2));
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.2;
+}
+
+.container {
+  width: min(1000px, 100% - 2.5rem);
+  margin: auto;
+}
+
+/* ---------- Cabeçalho / Menu ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(28, 16, 48, .95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color .2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: .5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Início ---------- */
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.eyebrow {
+  color: var(--accent);
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+  border: 4px solid var(--accent);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 158, 196, .4);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero .sub {
+  color: var(--muted);
+  max-width: 550px;
+  margin: 1rem auto;
+}
+
+.typing {
+  color: var(--accent2);
+  font-weight: 500;
+  min-height: 1.6em;
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+  color: var(--accent);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- Botões ---------- */
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #2a1240;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 158, 196, .3);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+/* ---------- Seções ---------- */
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+}
+
+/* Texto + imagem lado a lado */
+.split {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.split.flip {
+  grid-template-columns: 1.2fr .8fr;
+}
+
+.split + .split {
+  margin-top: 3rem;
+}
+
+.media {
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.media.portrait {
+  aspect-ratio: 4 / 5;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.media.portrait img {
+  object-position: center top;
+}
+
+.media:hover img {
+  transform: scale(1.04);
+}
+
+.text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.text h3 {
+  font-size: 1.5rem;
+  margin-bottom: .7rem;
+}
+
+/* Linha do tempo */
+.timeline {
+  padding-left: 2rem;
+  color: var(--muted);
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+}
+
+.timeline li::marker {
+  color: var(--accent);
+}
+
+.timeline h3 {
+  color: var(--text);
+}
+
+.timeline b {
+  color: var(--accent);
+}
+
+/* Habilidades */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  list-style: none;
+}
+
+.chips li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: .6rem 1rem;
+  border-radius: 30px;
+  transition: border-color .2s, color .2s;
+}
+
+.chips li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Projetos */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform .2s, border-color .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  margin: .5rem 0;
+}
+
+.card p,
+.card ul {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+.card a {
+  margin-top: auto;
+  color: var(--accent);
+}
+
+.kind {
+  color: var(--accent);
+  font-size: .9rem;
+}
+
+/* Contato */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: var(--muted);
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+.copy-email {
+  margin-top: 1.2rem;
+  background: none;
+  border: 0;
+  color: var(--accent2);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+/* Botão voltar ao topo */
+.to-top {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #2a1240;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .3s, transform .3s;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+/* Animação ao rolar (ativada pelo JavaScript) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.js .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* =========================================
+   Responsivo
+   ========================================= */
+
+/* Tablet */
+@media (max-width: 820px) {
+  .split,
+  .split.flip {
+    grid-template-columns: 1fr;
+  }
+
+  /* No celular a imagem aparece antes do texto */
+  .split.flip .media {
+    order: -1;
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  /* Menu vira "hambúrguer" */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(28, 16, 48, .98);
+    border-bottom: 1px solid var(--line);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+  }
+
+  .nav.open {
+    max-height: 400px;
+  }
+
+  .nav a {
+    display: block;
+    padding: .9rem 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
